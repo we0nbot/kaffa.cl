@@ -18,7 +18,7 @@ interface MenuItem {
   desc: string;
   price: number;
   emoji: string;
-  cat: "bayas" | "cafe" | "snack" | "dulce";
+  cat: "bayas" | "cafe" | "snack" | "dulce" | "desayuno";
   tags: string[];
   featured?: boolean;
   badge?: string;
@@ -102,6 +102,15 @@ const MENU_ITEMS: MenuItem[] = [
     id: 17, name: "Cheesecake Maqui", desc: "Base crocante, crema suave y coulis de maqui chileno.",
     price: 3200, emoji: "🍮", cat: "dulce", tags: ["Dulce", "Chileno"],
   },
+  // Desayunos
+  {
+    id: 18, name: "Desayuno Kaffa 1", desc: "Selladito + Café 8oz + jugo natural + kuchen.",
+    price: 8900, emoji: "🍳", cat: "desayuno", tags: ["Combo", "Completo"], featured: true, badge: "Recomendado",
+  },
+  {
+    id: 19, name: "Desayuno Kaffa 2", desc: "Café + Selladito + Vaso de yogurt con granola y berries.",
+    price: 7900, emoji: "🥣", cat: "desayuno", tags: ["Combo", "Saludable"],
+  },
 ];
 
 const CATEGORIES = [
@@ -110,6 +119,7 @@ const CATEGORIES = [
   { id: "cafe", label: "☕ Cafetería" },
   { id: "snack", label: "🥐 Snacks Salados" },
   { id: "dulce", label: "🍰 Dulces" },
+  { id: "desayuno", label: "🍳 Desayunos" },
 ];
 
 const FEATURED = MENU_ITEMS.filter((i) => i.featured);
