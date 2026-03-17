@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     apple: "/assets/kaffa logo.png",
   },
 };
- drum
 
 export default function RootLayout({
   children,
